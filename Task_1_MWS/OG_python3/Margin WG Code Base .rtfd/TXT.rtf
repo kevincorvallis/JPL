@@ -1,0 +1,129 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf500
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fswiss\fcharset0 Helvetica;\f2\fswiss\fcharset0 Helvetica-Bold;
+\f3\froman\fcharset0 TimesNewRomanPSMT;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red24\green55\blue106;\red0\green0\blue0;
+\red11\green76\blue180;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0\cname textColor;\cssrgb\c12157\c28627\c49020;\cssrgb\c0\c0\c0;
+\cssrgb\c1961\c38824\c75686;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf2 From: "Quade, Jackson J (397B)" <jackson.j.quade@jpl.nasa.gov>\
+Subject: FW: Margin WG Code Base\
+Date: June 26, 2019 at 11:00:00 AM PDT\
+To: "kevincorvallis@gmail.com" <kevincorvallis@gmail.com>\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1 \cf2 \
+\pard\pardeftab720\sl340\sa0\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 \'a0\cf4 \strokec4 \
+\cf3 \strokec3 \'a0\cf4 \strokec4 \
+\pard\pardeftab720\sl340\sa0\partightenfactor0
+
+\f2\b \cf4 From:
+\f1\b0  Hazelrig, James E (397B) <james.e.hazelrig@jpl.nasa.gov> \uc0\u8232 
+\f2\b Sent:
+\f1\b0  Tuesday, June 25, 2019 10:05 AM\uc0\u8232 
+\f2\b To:
+\f1\b0  Quade, Jackson J (397B) <jackson.j.quade@jpl.nasa.gov>\uc0\u8232 
+\f2\b Subject:
+\f1\b0  FW: Margin WG Code Base\
+\'a0\
+\pard\pardeftab720\sl340\sa0\partightenfactor0
+\cf3 \strokec3 \'a0\cf4 \strokec4 \
+\cf3 \strokec3 \'a0\cf4 \strokec4 \
+\pard\pardeftab720\sl340\sa0\partightenfactor0
+
+\f2\b \cf4 From:
+\f1\b0  Bennett, Christopher J (397A) <{\field{\*\fldinst{HYPERLINK "mailto:christopher.j.bennett@jpl.nasa.gov"}}{\fldrslt \cf5 \ul \ulc5 \strokec5 christopher.j.bennett@jpl.nasa.gov}}> \uc0\u8232 
+\f2\b Sent:
+\f1\b0  Thursday, May 2, 2019 11:09\uc0\u8232 
+\f2\b To:
+\f1\b0  Stroupe, Ashley W (397B) <{\field{\*\fldinst{HYPERLINK "mailto:ashley.w.stroupe@jpl.nasa.gov"}}{\fldrslt \cf5 \ul \ulc5 \strokec5 ashley.w.stroupe@jpl.nasa.gov}}>; Hazelrig, James E (397B) <{\field{\*\fldinst{HYPERLINK "mailto:james.e.hazelrig@jpl.nasa.gov"}}{\fldrslt \cf5 \ul \ulc5 \strokec5 james.e.hazelrig@jpl.nasa.gov}}>\uc0\u8232 
+\f2\b Subject:
+\f1\b0  RE: Margin WG Code Base\
+\'a0\
+\pard\pardeftab720\sl340\sa0\partightenfactor0
+\cf3 \strokec3 I couldn\'92t help it, so I updated the analyzeMargin script to do the cleanup I referred to below and added a new script \'93totalSubsandSols.py\'94 which just gives some summary level data of the pseudo-database. \cf4 \strokec4 \
+\cf3 \strokec3 \'a0\cf4 \strokec4 \
+\pard\pardeftab720\sl340\sa0\partightenfactor0
+
+\f2\b \cf4 From:
+\f1\b0  Bennett, Christopher J (397A) \uc0\u8232 
+\f2\b Sent:
+\f1\b0  Wednesday, May 1, 2019 11:01 AM\uc0\u8232 
+\f2\b To:
+\f1\b0  Stroupe, Ashley W (397B) <{\field{\*\fldinst{HYPERLINK "mailto:Ashley.W.Stroupe@jpl.nasa.gov"}}{\fldrslt \cf5 \ul \ulc5 \strokec5 Ashley.W.Stroupe@jpl.nasa.gov}}>; Hazelrig, James E (397B) <{\field{\*\fldinst{HYPERLINK "mailto:James.E.Hazelrig@jpl.nasa.gov"}}{\fldrslt \cf5 \ul \ulc5 \strokec5 James.E.Hazelrig@jpl.nasa.gov}}>\uc0\u8232 
+\f2\b Subject:
+\f1\b0  Margin WG Code Base\
+\'a0\
+James/Ashley,\
+\'a0\
+I\'92ll set up a meeting to talk about this more, but wanted to get you these files. \'a0Let me know if I should include anyone else.\
+\'a0\
+Attached is the code base that I have for Margin WG.\'a0 The two primary scripts are:\
+\'a0\
+1)
+\f3\fs18\fsmilli9333 \'a0\'a0\'a0\'a0\'a0 
+\f1\fs29\fsmilli14667 SubmasterDurations.py which queries the MSLICE Database for planned durations and SPAZZ (from downlink) to get actuals associated with each submaster.\'a0 It does some filtering to ignore various things like sub_00000, missing data, or not clearly identified data.\'a0 It strips the data down to only the bits we care about and then organizes it in a convenient way.\'a0 It creates a pseudo-database of submaster durations for a given sol range as a .json file that you specify in the input section of the code (Note I don\'92t have this set up to run from command line right now, I just edit the code and run it manually from my IDE). \
+a.
+\f3\fs18\fsmilli9333 \'a0\'a0\'a0\'a0\'a0\'a0 
+\f1\fs29\fsmilli14667 This code also outputs several other .json files that help with troubleshooting. Including: \
+\pard\pardeftab720\sl200\sa0\partightenfactor0
+
+\f3\fs18\fsmilli9333 \cf4 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 
+\f1\fs29\fsmilli14667 i.
+\f3\fs18\fsmilli9333 \'a0\'a0\'a0\'a0\'a0 
+\f1\fs29\fsmilli14667 unidentifiedChildren.json \'96 a list of activity names that did not get placed into one of the primary categories of \'93sb, PDI, drive, arm, ecam, other_sci\'94.\'a0 A good sanity check to scan every now and then for new naming conventions that should be included in the code. \
+
+\f3\fs18\fsmilli9333 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 
+\f1\fs29\fsmilli14667 ii.
+\f3\fs18\fsmilli9333 \'a0\'a0\'a0\'a0\'a0 
+\f1\fs29\fsmilli14667 differentNamesforMargin.json \'96 A list of activities that had margin in the title in some way.\'a0 Again, a good sanity check to look for change in conventions that may need to be updated in the code. \
+
+\f3\fs18\fsmilli9333 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 
+\f1\fs29\fsmilli14667 iii.
+\f3\fs18\fsmilli9333 \'a0\'a0\'a0\'a0\'a0 
+\f1\fs29\fsmilli14667 childNamesWhenMissingMargins.json -\'a0 a list of the activity names for a submaster when no margin could be identified for that submaster.\'a0 Can spot check this for areas where your code is systematically missing a specific type of activity. \'a0\
+\pard\pardeftab720\sl340\sa0\partightenfactor0
+\cf4 b.
+\f3\fs18\fsmilli9333 \'a0\'a0\'a0\'a0\'a0\'a0 
+\f1\fs29\fsmilli14667 Note that sometimes you have to ask Steven to update MSLICE database since the chron dies occasionally.\'a0 \
+2)
+\f3\fs18\fsmilli9333 \'a0\'a0\'a0\'a0\'a0 
+\f1\fs29\fsmilli14667 analyzeMarginUse.py which reads a specified json file then sort, plot, and math it to get the summaries I care about. \'a0This code is a bit dirty as it has always been for quick analyses.\'a0 It could be systematically rewritten with more consistent helper functions etc. but it gets the job done. \
+a.
+\f3\fs18\fsmilli9333 \'a0\'a0\'a0\'a0\'a0\'a0 
+\f1\fs29\fsmilli14667 This code also outputs several other .json files to help with troubleshooting\
+\pard\pardeftab720\sl200\sa0\partightenfactor0
+
+\f3\fs18\fsmilli9333 \cf4 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 
+\f1\fs29\fsmilli14667 i.
+\f3\fs18\fsmilli9333 \'a0\'a0\'a0\'a0\'a0 
+\f1\fs29\fsmilli14667 seqIDsThatUsedAnyMargin.json \'96 a list of all seqIDS that used any margin at all.\'a0 Useful for SO/RPs to look at specific instances of under-estimation.\
+
+\f3\fs18\fsmilli9333 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 
+\f1\fs29\fsmilli14667 ii.
+\f3\fs18\fsmilli9333 \'a0\'a0\'a0\'a0\'a0 
+\f1\fs29\fsmilli14667 SBsThatUsed50PercentMargin.json \'96 a list of SBs that specifically used >50% margin.\'a0 This was specifically requested by science to help them identify systematic under-estimation of activity durations.\'a0 \
+\pard\pardeftab720\sl340\sa0\partightenfactor0
+\cf4 \'a0\
+Both sets of code should be pretty well commented. \
+\'a0\
+The dependency set is listed in the import functions at the top of each code base. All are standard ones you can import from the internet except msldatalytics.py.\'a0 I\'92ve included the link for msldatalytics here: \'a0\
+\'a0\
+\pard\pardeftab720\sl340\sa0\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://github.jpl.nasa.gov/MSLEO/msl-datalytics"}}{\fldrslt \cf5 \ul \ulc5 \strokec5 https://github.jpl.nasa.gov/MSLEO/msl-datalytics}} \
+\'a0\
+\'a0\
+Sincerely,\
+\'a0\
+Chris Bennett\
+\'a0\
+MSL Integrated Planning and Execution\
+Office: (818) 393-7549\
+Location: 264-622B\
+Cell: (626) 720-9412\
+\'a0\
+}
