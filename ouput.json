@@ -1,0 +1,389 @@
+{
+    "sol2386_sub_00386": {
+        "actActivityDur": 2457.2394100427628, 
+        "actMarginDur": 1447.7605899572372, 
+        "backboneType": [
+            "arm", 
+            "ECAM"
+        ], 
+        "masterSol": 2386, 
+        "planActivityDur": 2975.0, 
+        "planMarginDur": 930.0, 
+        "planTotalDur": 3905.0, 
+        "seqId": "sub_00386", 
+        "uniqueID": "sol2386_sub_00386"
+    }, 
+    "sol2386_sub_01386": {
+        "actActivityDur": 4107.3357400894165, 
+        "actMarginDur": 501.89425991058306, 
+        "backboneType": [
+            "SB"
+        ], 
+        "masterSol": 2386, 
+        "planActivityDur": 4159.23, 
+        "planMarginDur": 450.0, 
+        "planTotalDur": 4609.23, 
+        "seqId": "sub_01386", 
+        "uniqueID": "sol2386_sub_01386"
+    }, 
+    "sol2386_sub_02386": {
+        "actActivityDur": 6806.516930103302, 
+        "actMarginDur": 573.483069896698, 
+        "backboneType": [
+            "unidentified"
+        ], 
+        "masterSol": 2386, 
+        "planActivityDur": 7080.0, 
+        "planMarginDur": 300.0, 
+        "planTotalDur": 7380.0, 
+        "seqId": "sub_02386", 
+        "uniqueID": "sol2386_sub_02386"
+    }, 
+    "sol2387_sub_00387": {
+        "actActivityDur": 6828.50917994976, 
+        "actMarginDur": 877.1708200502399, 
+        "backboneType": [
+            "otherSci", 
+            "ECAM", 
+            "SB"
+        ], 
+        "masterSol": 2387, 
+        "planActivityDur": 7105.68, 
+        "planMarginDur": 600.0, 
+        "planTotalDur": 7705.68, 
+        "seqId": "sub_00387", 
+        "uniqueID": "sol2387_sub_00387"
+    }, 
+    "sol2388_sub_00388": {
+        "actActivityDur": 3770.679509997368, 
+        "actMarginDur": 560.8304900026324, 
+        "backboneType": [
+            "SB"
+        ], 
+        "masterSol": 2388, 
+        "planActivityDur": 3971.51, 
+        "planMarginDur": 360.0, 
+        "planTotalDur": 4331.51, 
+        "seqId": "sub_00388", 
+        "uniqueID": "sol2388_sub_00388"
+    }, 
+    "sol2388_sub_01388": {
+        "actActivityDur": 3370.4686000347137, 
+        "actMarginDur": 1794.5313999652863, 
+        "backboneType": [
+            "arm", 
+            "ECAM"
+        ], 
+        "masterSol": 2388, 
+        "planActivityDur": 4595.0, 
+        "planMarginDur": 570.0, 
+        "planTotalDur": 5165.0, 
+        "seqId": "sub_01388", 
+        "uniqueID": "sol2388_sub_01388"
+    }, 
+    "sol2389_sub_00389": {
+        "actActivityDur": 5696.734220027924, 
+        "actMarginDur": 620.0357799720769, 
+        "backboneType": [
+            "otherSci", 
+            "ECAM", 
+            "SB"
+        ], 
+        "masterSol": 2389, 
+        "planActivityDur": 5716.77, 
+        "planMarginDur": 600.0, 
+        "planTotalDur": 6316.77, 
+        "seqId": "sub_00389", 
+        "uniqueID": "sol2389_sub_00389"
+    }, 
+    "sol2389_sub_01389": {
+        "actActivityDur": 2217.4768899679184, 
+        "actMarginDur": 1082.5231100320816, 
+        "backboneType": [
+            "SB"
+        ], 
+        "masterSol": 2389, 
+        "planActivityDur": 3000.0, 
+        "planMarginDur": 300.0, 
+        "planTotalDur": 3300.0, 
+        "seqId": "sub_01389", 
+        "uniqueID": "sol2389_sub_01389"
+    }, 
+    "sol2390_sub_00390": {
+        "actActivityDur": 5307.16890001297, 
+        "actMarginDur": 1503.9010999870297, 
+        "backboneType": [
+            "SB", 
+            "ECAM"
+        ], 
+        "masterSol": 2390, 
+        "planActivityDur": 6301.07, 
+        "planMarginDur": 510.0, 
+        "planTotalDur": 6811.07, 
+        "seqId": "sub_00390", 
+        "uniqueID": "sol2390_sub_00390"
+    }, 
+    "sol2390_sub_01390": {
+        "actActivityDur": 1207.3829799890518, 
+        "actMarginDur": 205.32702001094822, 
+        "backboneType": [
+            "SB"
+        ], 
+        "masterSol": 2390, 
+        "planActivityDur": 1262.71, 
+        "planMarginDur": 150.0, 
+        "planTotalDur": 1412.71, 
+        "seqId": "sub_01390", 
+        "uniqueID": "sol2390_sub_01390"
+    }, 
+    "sol2391_sub_00391": {
+        "actActivityDur": 5143.626039981842, 
+        "actMarginDur": 1003.5239600181576, 
+        "backboneType": [
+            "otherSci", 
+            "ECAM", 
+            "SB"
+        ], 
+        "masterSol": 2391, 
+        "planActivityDur": 5697.15, 
+        "planMarginDur": 450.0, 
+        "planTotalDur": 6147.15, 
+        "seqId": "sub_00391", 
+        "uniqueID": "sol2391_sub_00391"
+    }, 
+    "sol2391_sub_01391": {
+        "actActivityDur": 831.6444700956345, 
+        "actMarginDur": 284.35552990436554, 
+        "backboneType": [
+            "SB"
+        ], 
+        "masterSol": 2391, 
+        "planActivityDur": 966.0, 
+        "planMarginDur": 150.0, 
+        "planTotalDur": 1116.0, 
+        "seqId": "sub_01391", 
+        "uniqueID": "sol2391_sub_01391"
+    }, 
+    "sol2392_sub_00392": {
+        "actActivityDur": 558.9999599456787, 
+        "actMarginDur": 91.00004005432129, 
+        "backboneType": [
+            "otherSci", 
+            "ECAM"
+        ], 
+        "masterSol": 2392, 
+        "planActivityDur": 620.0, 
+        "planMarginDur": 30.0, 
+        "planTotalDur": 650.0, 
+        "seqId": "sub_00392", 
+        "uniqueID": "sol2392_sub_00392"
+    }, 
+    "sol2393_sub_00393": {
+        "actActivityDur": 2204.442120075226, 
+        "actMarginDur": 846.5578799247742, 
+        "backboneType": [
+            "unidentified", 
+            "arm", 
+            "ECAM"
+        ], 
+        "masterSol": 2393, 
+        "planActivityDur": 2421.0, 
+        "planMarginDur": 630.0, 
+        "planTotalDur": 3051.0, 
+        "seqId": "sub_00393", 
+        "uniqueID": "sol2393_sub_00393"
+    }, 
+    "sol2393_sub_01393": {
+        "actActivityDur": 1742.8763800859451, 
+        "actMarginDur": 537.1236199140549, 
+        "backboneType": [
+            "SB"
+        ], 
+        "masterSol": 2393, 
+        "planActivityDur": 2040.0, 
+        "planMarginDur": 240.0, 
+        "planTotalDur": 2280.0, 
+        "seqId": "sub_01393", 
+        "uniqueID": "sol2393_sub_01393"
+    }, 
+    "sol2394_sub_00394": {
+        "actActivityDur": 4940.313540101051, 
+        "actMarginDur": 317.5064598989484, 
+        "backboneType": [
+            "otherSci", 
+            "ECAM", 
+            "SB"
+        ], 
+        "masterSol": 2394, 
+        "planActivityDur": 4957.82, 
+        "planMarginDur": 300.0, 
+        "planTotalDur": 5257.82, 
+        "seqId": "sub_00394", 
+        "uniqueID": "sol2394_sub_00394"
+    }, 
+    "sol2395_sub_00395": {
+        "actActivityDur": 61.14014005661011, 
+        "actMarginDur": 118.85985994338989, 
+        "backboneType": [
+            "ECAM"
+        ], 
+        "masterSol": 2395, 
+        "planActivityDur": 120.0, 
+        "planMarginDur": 60.0, 
+        "planTotalDur": 180.0, 
+        "seqId": "sub_00395", 
+        "uniqueID": "sol2395_sub_00395"
+    }, 
+    "sol2395_sub_01395": {
+        "actActivityDur": 201.29256999492645, 
+        "actMarginDur": 158.70743000507355, 
+        "backboneType": [
+            "unidentified"
+        ], 
+        "masterSol": 2395, 
+        "planActivityDur": 300.0, 
+        "planMarginDur": 60.0, 
+        "planTotalDur": 360.0, 
+        "seqId": "sub_01395", 
+        "uniqueID": "sol2395_sub_01395"
+    }, 
+    "sol2396_sub_00396": {
+        "actActivityDur": 5134.554749965668, 
+        "actMarginDur": 1008.5752500343324, 
+        "backboneType": [
+            "otherSci", 
+            "ECAM", 
+            "unidentified", 
+            "SB"
+        ], 
+        "masterSol": 2396, 
+        "planActivityDur": 5243.13, 
+        "planMarginDur": 900.0, 
+        "planTotalDur": 6143.13, 
+        "seqId": "sub_00396", 
+        "uniqueID": "sol2396_sub_00396"
+    }, 
+    "sol2397_sub_00397": {
+        "actActivityDur": 2127.5067600011826, 
+        "actMarginDur": 770.4932399988174, 
+        "backboneType": [
+            "arm"
+        ], 
+        "masterSol": 2397, 
+        "planActivityDur": 2298.0, 
+        "planMarginDur": 600.0, 
+        "planTotalDur": 2898.0, 
+        "seqId": "sub_00397", 
+        "uniqueID": "sol2397_sub_00397"
+    }, 
+    "sol2397_sub_01397": {
+        "actActivityDur": 68.65758001804352, 
+        "actMarginDur": 81.34241998195648, 
+        "backboneType": [
+            "ECAM"
+        ], 
+        "masterSol": 2397, 
+        "planActivityDur": 120.0, 
+        "planMarginDur": 30.0, 
+        "planTotalDur": 150.0, 
+        "seqId": "sub_01397", 
+        "uniqueID": "sol2397_sub_01397"
+    }, 
+    "sol2398_sub_00398": {
+        "actActivityDur": 565.8122700452805, 
+        "actMarginDur": 174.18772995471954, 
+        "backboneType": [
+            "ECAM", 
+            "otherSci"
+        ], 
+        "masterSol": 2398, 
+        "planActivityDur": 620.0, 
+        "planMarginDur": 120.0, 
+        "planTotalDur": 740.0, 
+        "seqId": "sub_00398", 
+        "uniqueID": "sol2398_sub_00398"
+    }, 
+    "sol2399_sub_00399": {
+        "actActivityDur": 5790.49950003624, 
+        "actMarginDur": 676.6704999637604, 
+        "backboneType": [
+            "ECAM", 
+            "otherSci", 
+            "SB"
+        ], 
+        "masterSol": 2399, 
+        "planActivityDur": 5957.17, 
+        "planMarginDur": 510.0, 
+        "planTotalDur": 6467.17, 
+        "seqId": "sub_00399", 
+        "uniqueID": "sol2399_sub_00399"
+    }, 
+    "sol2399_sub_01399": {
+        "actActivityDur": 917.6794300079346, 
+        "actMarginDur": 168.32056999206543, 
+        "backboneType": [
+            "SB"
+        ], 
+        "masterSol": 2399, 
+        "planActivityDur": 966.0, 
+        "planMarginDur": 120.0, 
+        "planTotalDur": 1086.0, 
+        "seqId": "sub_01399", 
+        "uniqueID": "sol2399_sub_01399"
+    }, 
+    "sol2400_sub_00400": {
+        "actActivityDur": 2560.190889954567, 
+        "actMarginDur": 309.829110045433, 
+        "backboneType": [
+            "ECAM", 
+            "SB"
+        ], 
+        "masterSol": 2400, 
+        "planActivityDur": 2570.02, 
+        "planMarginDur": 300.0, 
+        "planTotalDur": 2870.02, 
+        "seqId": "sub_00400", 
+        "uniqueID": "sol2400_sub_00400"
+    }, 
+    "sol2400_sub_02400": {
+        "actActivityDur": 3441.1263300180435, 
+        "actMarginDur": 740.9836699819562, 
+        "backboneType": [
+            "SB"
+        ], 
+        "masterSol": 2400, 
+        "planActivityDur": 3882.1099999999997, 
+        "planMarginDur": 300.0, 
+        "planTotalDur": 4182.11, 
+        "seqId": "sub_02400", 
+        "uniqueID": "sol2400_sub_02400"
+    }, 
+    "sol2400_sub_03400": {
+        "actActivityDur": 288.62446999549866, 
+        "actMarginDur": 816.3755300045013, 
+        "backboneType": [
+            "SB"
+        ], 
+        "masterSol": 2400, 
+        "planActivityDur": 985.0, 
+        "planMarginDur": 120.0, 
+        "planTotalDur": 1105.0, 
+        "seqId": "sub_03400", 
+        "uniqueID": "sol2400_sub_03400"
+    }, 
+    "sol2401_sub_00401": {
+        "actActivityDur": 5418.810409903526, 
+        "actMarginDur": 1656.1895900964737, 
+        "backboneType": [
+            "arm", 
+            "ECAM", 
+            "unidentified"
+        ], 
+        "masterSol": 2401, 
+        "planActivityDur": 5875.0, 
+        "planMarginDur": 1200.0, 
+        "planTotalDur": 7075.0, 
+        "seqId": "sub_00401", 
+        "uniqueID": "sol2401_sub_00401"
+    }
+}
