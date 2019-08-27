@@ -1,0 +1,110 @@
+Kept 382 of 447 for analysis.
+Percent Margin ever used:
+Category: sb
+2.79% of sb activities use any margin at all
+25 percentile percent of margin used = -138.375%
+50 percentile percent of margin used = -84.091%
+75 percentile percent of margin used = -49.3165%
+95 percentile percent of margin used = -6.2153%
+99 percentile percent of margin used = 7.75074%
+Category: all
+4.97% of all activities use any margin at all
+25 percentile percent of margin used = -148.74975%
+50 percentile percent of margin used = -82.25%
+75 percentile percent of margin used = -39.5%
+95 percentile percent of margin used = -1.0%
+99 percentile percent of margin used = 36.08293%
+Category: arm
+9.2% of arm activities use any margin at all
+25 percentile percent of margin used = -91.651%
+50 percentile percent of margin used = -36.0%
+75 percentile percent of margin used = -20.0325%
+95 percentile percent of margin used = 13.7775%
+99 percentile percent of margin used = 40.46558%
+Category: drive
+8.0% of drive activities use any margin at all
+25 percentile percent of margin used = -151.291%
+50 percentile percent of margin used = -121.221%
+75 percentile percent of margin used = -93.056%
+95 percentile percent of margin used = 49.2192%
+99 percentile percent of margin used = 79.84004%
+()
+Amount Margin ever used
+Category: sb
+2.79 minutes of sb activities use any margin at all
+25 percentile minutes of margin used = -8.045
+50 percentile minutes of margin used = -4.19
+75 percentile minutes of margin used = -1.85
+95 percentile minutes of margin used = -0.2
+99 percentile minutes of margin used = 0.301
+Category: all
+4.97 minutes of all activities use any margin at all
+25 percentile minutes of margin used = -8.0775
+50 percentile minutes of margin used = -3.525
+75 percentile minutes of margin used = -1.2725
+95 percentile minutes of margin used = -0.0525
+99 percentile minutes of margin used = 3.2065
+Category: arm
+9.2 minutes of arm activities use any margin at all
+25 percentile minutes of margin used = -8.79
+50 percentile minutes of margin used = -3.78
+75 percentile minutes of margin used = -1.52
+95 percentile minutes of margin used = 0.658
+99 percentile minutes of margin used = 6.9746
+Category: drive
+8.0 minutes of drive activities use any margin at all
+25 percentile minutes of margin used = -29.88
+50 percentile minutes of margin used = -22.14
+75 percentile minutes of margin used = -15.01
+95 percentile minutes of margin used = 7.94
+99 percentile minutes of margin used = 13.972
+Percent of margin planned relative to activity duration
+Category: sb
+25 percentile percent of margin planned relative to activity duration = 8.3665
+50 percentile percent of margin planned relative to activity duration = 9.319
+75 percentile percent of margin planned relative to activity duration = 12.418
+95 percentile percent of margin planned relative to activity duration = 29.8281
+99 percentile percent of margin planned relative to activity duration = 84.01526
+Category: all
+25 percentile percent of margin planned relative to activity duration = 9.26125
+50 percentile percent of margin planned relative to activity duration = 14.9625
+75 percentile percent of margin planned relative to activity duration = 26.8395
+95 percentile percent of margin planned relative to activity duration = 66.667
+99 percentile percent of margin planned relative to activity duration = 68.34486
+Category: arm
+25 percentile percent of margin planned relative to activity duration = 14.54
+50 percentile percent of margin planned relative to activity duration = 23.891
+75 percentile percent of margin planned relative to activity duration = 28.3395
+95 percentile percent of margin planned relative to activity duration = 47.9666
+99 percentile percent of margin planned relative to activity duration = 61.10726
+Category: drive
+25 percentile percent of margin planned relative to activity duration = 17.774
+50 percentile percent of margin planned relative to activity duration = 21.939
+75 percentile percent of margin planned relative to activity duration = 26.504
+95 percentile percent of margin planned relative to activity duration = 59.2814
+99 percentile percent of margin planned relative to activity duration = 68.23092
+Amount of Idle Time in Minutes
+Category: sb
+25 percentile idle time in minutes = 6.32
+50 percentile idle time in minutes = 10.1
+75 percentile idle time in minutes = 14.525
+95 percentile idle time in minutes = 20.72
+99 percentile idle time in minutes = 29.3496
+Category: all
+25 percentile idle time in minutes = 3.92
+50 percentile idle time in minutes = 9.52
+75 percentile idle time in minutes = 16.21
+95 percentile idle time in minutes = 44.3685
+99 percentile idle time in minutes = 120.8327
+Category: arm
+25 percentile idle time in minutes = 8.63
+50 percentile idle time in minutes = 13.67
+75 percentile idle time in minutes = 25.02
+95 percentile idle time in minutes = 57.994
+99 percentile idle time in minutes = 174.3134
+Category: drive
+25 percentile idle time in minutes = 34.14
+50 percentile idle time in minutes = 40.64
+75 percentile idle time in minutes = 48.38
+95 percentile idle time in minutes = 56.616
+99 percentile idle time in minutes = 87.8292

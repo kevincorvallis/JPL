@@ -1,0 +1,118 @@
+<html>
+
+<head>
+        <!-- Plotly.js -->
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <!-- D3.js -->
+        <script type="text/javascript" src="d3.v2.min.js"></script>
+      </head>
+      
+      <body>
+        
+        <div id="myDiv"><!-- Plotly chart will be drawn inside this DIV --></div>
+        <script>
+        //   <!-- JAVASCRIPT CODE GOES HERE -->
+            var xValue = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+            // var yValue = $.csv.toObjects("/d3js_projects/Idletime_drive.csv");
+
+
+            let yValue = [];
+            function getAstext(fileToRead){
+                let reader = new FileReader(); //built in API, look it up if need more info
+
+                reader.readAsText(fileToRead);
+
+                reader.onload = loadHandler; 
+                reader.onerror = errorHandler;
+
+            }
+            
+            function errorHandler(evt) {
+                if(evt.target.error.name == "NotReadbleError") {
+                    alert("Cannot read file! ");
+                }
+            }
+
+            function displayWinner() {
+                model.style.display = "none";
+            
+            }
+            function handleFiles(files) {
+                //Making sure the browser supports the file reader
+                if (window.FileReader){
+                    getAsText(files[0]);
+                    fileUploaded = true;
+                } else{
+                    alert("FileReader is not supported in the browser");
+                }
+            }
+            function loadHandler(event) {
+                //Make sure the data is compatible
+                let csv = event.target.result;
+                processData(csv); 
+
+            }
+            function processData(csv) {
+                let allTextLines = csv.split('/\r\n|\n');
+
+                for (let i = 0; i < allTextLines.length; i++) {
+                    let row = allTextLines[i].split(';');
+                    let col = [];
+                    for (let j = 0; j < row.length; j++){
+                        col.push(row[j]);
+                    }
+                    attendesArray.push(col);
+
+                    
+                }
+
+            }
+            function getAsText(file){
+
+            }
+
+            function randomizeWinner() {
+                if (!fileUploaded) {
+                    openModal("errorModal")
+                } else if (attendesArray.length === 0) {    // if they upload an empty file
+                    let min = 0;
+                    let max = attendesArray.length;
+                    let winnerIndex = ath.floor(Math.random() * (max - min + 1)) * min;
+
+                    currentWinner = attendesArray[winnerIndex];
+                    displayWinner();
+            }
+            document.write(yValue);
+            // var yValue = [20, 14, 23];
+
+            // var trace1 = {
+            // x: xValue,
+            // y: yValue,
+            // type: 'bar',
+            // text: yValue.map(String),
+            // textposition: 'auto',
+            // hoverinfo: 'none',
+            // marker: {
+            //     color: 'rgb(158,202,225)',
+            //     opacity: 0.6,
+            //     line: {
+            //     color: 'rgb(8,48,107)',
+            //     width: 1.5
+            //     }
+            // }
+            // };
+
+            // var data = [trace1];
+
+            // var layout = {
+            // title: 'January 2013 Sales Report'
+            // };
+
+            // Plotly.newPlot('myDiv', data, layout);
+        </script>
+      </body>
+
+      
+      
+      
+</html>

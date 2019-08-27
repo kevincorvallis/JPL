@@ -2,17 +2,21 @@
 
 import os, sys, json, re
 from math import floor
-import elasticsearch, urllib3
+import elasticsearch1, urllib3
 from elasticsearch1 import helpers
 pwd = os.getcwd()
 sys.path.insert(0, '{}/msl-datalytics/src/'.format(pwd))
 from spazz import *
+import timeit   
+start = time.time()
 # from msldatalytics.src.spazz import *
 #from spazz import *
 
-es = elasticsearch.Elasticsearch('https://msl-ops-es.cld.jpl.nasa.gov',sniff_on_start=False)
-urllib3.disable_warnings()
 
+es = elasticsearch1.Elasticsearch('https://msl-ops-es.cld.jpl.nasa.gov', sniff_on_start=False)
+
+# es = elasticsearch1.Elasticsearch('https://msl-ops-es.cld.jpl.nasa.gov',sniff_on_start=False)
+urllib3.disable_warnings()
 global index
 index = 'mslice_db'
 
@@ -21,12 +25,26 @@ def main():
     # --------------------------------------------- Input Parameters and Initializaton -------------------------------------------------
     # parameters that should eventually be inputs
     verbose = False # a verbose flag that identifies every time a submaster was rejected from the analysis
-    filename = 'submasterDurations_sols2170to2395_postUpdate' # name of the .json file output to be used as a pseudo-database
+    filename = 'demonstrationoutput' # name of the .json file output to be used as a pseudo-database
     queryLen = 5000 # how large do we let the query get.  Currently we wouldn't want anything larger than 5000 results
-    earliestSol = 2170 # the earliest sol of results we want to include in our data.  With our naming convention for submaster sequences we should only query within modulo 1000
-    #note that we changed to the current margin strategy on 2169
-    latestSol = 2395
-    keepOutSols = range(1759, 1779)+range(2172,2209)+range(2320,2348) # a list of sols we know we don't want to include in the results; 
+    # earliestSol = 2170 # the earliest sol of results we want to include in our data.  With our naming convention for submaster sequences we should only query within modulo 1000
+    #note that margin strategy changed on 2169
+    
+
+    #================================================================================================================================================
+    #======================================================INPUT=====================================================================================
+    starting_Sol = 2000
+    latestSol = 2150
+    # while(earliestSol == 0 and latestSol == 0):
+    #     inputstart = input("Start Sol: ")
+    #     inputend = input("End Sol: ")
+    #     earliestSol = inputstart
+    #     latestSol = inputend
+    #================================================================================================================================================
+    #================================================================================================================================================
+    #================================================================================================================================================
+
+    keepOutSols = range(1759, 1779)+range(2172,2209)+range(2320,2348) # a list of soles we know we don't want to include in the results; 
     #1759-1779 = conjunction; 2172-2209 = 2172 anomaly recovery; 2320-2348 = Safing on RCE-A on 2320 and again on 2339 and subsequent swap to B
     # create some counters that explain the reason for dropping various submasters
     numDuplicateSubsErrors = 0
@@ -37,10 +55,12 @@ def main():
     numMissingActualsErrors = 0
     numMultipleActualsErrors = 0
     # initialize Spazz for a future query
-    spazzObj = spazz({'beginTime' : "Sol-" + str(earliestSol) + "M00:00:00",'timeType': "LST"})
+    spazzObj = spazz({'beginTime' : "Sol-" + str(starting_Sol) + "M00:00:00",'timeType': "LST"})
     #initialize the query
     # the "not" line should remove all instances of sub_00000
-    q = {
+    # This query is essensially a frame work for the elasticsearch to base off from. It continuosly parses through EVR files to 
+    # match tihs query. 
+    query = {
         "query": {
             "filtered": {
                 "query": { 
@@ -55,7 +75,7 @@ def main():
                         "must":[
                             {"range" : {
                                 "planSol" : {
-                                    "gte" : earliestSol,
+                                    "gte" : starting_Sol,
                                     "lte" : latestSol
                                 }
                             }},
@@ -70,11 +90,13 @@ def main():
         "_source": ["seqId","Duration","Children","masterSol", "seqgenDuration"],
         "sort": { "masterSol": { "order": "desc" }}
     }
+
     # ------------------------------------------ Search ---------------------------------------------------
     #send query to ES and reduce it down to results
-    search = es.search(index=index, body=q)
+    search = es.search(index=index, body=query)
     results = search['hits']['hits']
     totalHits = len(search['hits']['hits'])
+    # print("Results are ======== ", )search
     #create a variable to store unidentified backbone child names for troubleshooting
     unidentifiedBackbones = []
     marginNamesSanityCheck = []
@@ -85,17 +107,23 @@ def main():
     # ------------------------------ iterate through results; build pseudo database ----------------------------
     # loop through the submasters and populate a new entry in the submasters dict 
     percentComplete = 0
-    for jj,result in enumerate(results):
+    for count,result in enumerate(results):
         #print a message every 10% of the results that has been analyzed
-        if (jj % (floor(totalHits/10))) == 0:
-            print(str(percentComplete) + '% of results processed')
-            percentComplete+=10
+        if floor(totalHits/100) == False:
+            pass
+        elif (count % (floor(totalHits/100))) == 0: #This is smart lol
+            print("{}%".format(percentComplete))
+            percentComplete+=1
         seqId = result['_source']['seqId']
-        masterSol = int(result['_source']['masterSol'])
+        
+        # masterSol = int(result['_source']['masterSol'])
+        masterSol = int(result['_source'].get('masterSol',"0"))
         uniqueID = 'sol' + str(masterSol)+'_' + seqId
         # initialize a new entry in the temporary submasters dict for this submaster sequence
         keepSeqId = True
         seqIdDict = {}
+        # print("Am I getting data?", masterSol)
+        
         # Skip all EKO's sub_00000; this should never happen so if it does, please warn user
         if seqId == 'sub_00000':
             print('')
@@ -221,6 +249,7 @@ def main():
             if keepSeqId:
                 # now query for actuals
                 hits, _ = spazzObj.get_as_run_sequences(seqids=[seqId])
+                # print("NEVER GOT HERE")
                 if (len(hits) >= 1):
                     actual_found = False
                     for kk, hit in enumerate(hits):
@@ -278,9 +307,21 @@ def main():
         json.dump(noMarginFoundChildNames, fp3, sort_keys = True, indent= 4)
     print('Successfully wrote output to ' + filename + '.json')
     print('Script Complete')
+    end = time.time()
+    mins = 0 
+    result_time = end - start
+    if result_time > 60:
+        mins = int(floor(result_time/60))
+        seconds = int(floor(result_time % 60))
+        print("Run time: {} minutes {} seconds".format(mins, seconds))
+    else:
+        print("Run time: {} seconds".format(result_time))
     
     #print(submasters)
         
+
+    
+
 ###############################################################################
 #def index_docs(docs):
 #    helpers.bulk(es,docs)
